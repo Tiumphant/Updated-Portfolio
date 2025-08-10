@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
-import bgvedio from "../page/asset/217643.mp4";
+import bgvedio from "../page/asset/2176431.mp4";
 import "./Home.css";
 import img from "../page/asset/image.webp";
 
@@ -54,7 +54,7 @@ function Home() {
             >
               <button>Download CV</button>
             </a>
-            <a href="#contact">
+            <a href="/contact">
               <button>Contact Me</button>
             </a>
           </div>

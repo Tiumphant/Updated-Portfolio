@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Skills.css";
-import bgvideo from "../page/asset/217643.mp4"; // Update the path if needed
+import bgvideo from "../page/asset/2176431.mp4";
 
 function Skills() {
   const skills = [
