@@ -1,0 +1,43 @@
+
+
+.navbar-dark {
+  background-color: #121212 !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f9f9f9 !important;
+  letter-spacing: 1px;
+}
+
+.navbar-brand:hover {
+  color: #19d4ec !important;
+}
+
+.nav-link {
+  color: #f0f0f0 !important;
+  margin-left: 1.5rem;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #00bcd4 ;
+  text-decoration: underline;
+}
+
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba%28255, 255, 255, 0.7%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.nav {
+  color: #00bcd4 !important;
+}
