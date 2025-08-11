@@ -1,0 +1,89 @@
+.skill-section {
+  padding: 60px 20px;
+  background-color: inherit;
+  color: inherit; 
+}
+
+.skill-container {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.skill-container h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.skill-container p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.skill {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.skill span {
+  font-weight: bold;
+}
+
+.skill-bar {
+  background: rgba(255, 255, 255, 0.2);
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  width: 0;
+  background-color: #ff6600; 
+  transition: width 1.5s ease-in-out;
+}
+
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeIn 1s forwards;
+  color: #007bff;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.skill-btn {
+  background-color: #ff6600; 
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 25px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.skill-btn:hover {
+  background-color: #e65c00;
+}

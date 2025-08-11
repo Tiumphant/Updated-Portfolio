@@ -1,0 +1,164 @@
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  gap: 40px;
+  min-height: 70vh;
+  background: #f9f9f9;
+}
+
+.home-left {
+  flex: 1;
+}
+
+.home-right {
+  flex: 0.7;
+  display: flex;
+  justify-content: center;
+}
+
+.home-right img {
+  max-width: 250px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  animation: floatUpDown 4s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.button-group {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #007bff;
+  border: 2px solid #007bff;
+}
+p{
+    font-weight: bold;
+}
+
+.btn-secondary:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-right {
+    order: -1; 
+  }
+
+}
+
+.floating img {
+  animation: floatUpDown 4s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+
+.cursor {
+  display: inline-block;
+  margin-left: 3px;
+  animation: blink 0.7s infinite;
+  color: #ffb400;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+
+.fade-section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.fade-section:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.fade-section:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.fade-section:nth-child(4) {
+  animation-delay: 0.9s;
+}
+.fade-section:nth-child(5) {
+  animation-delay: 1.2s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.floating img {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.fade-section {
+  padding: 80px 20px;
+}
+
+.button-group button {
+  transition: all 0.3s ease;
+}
+
+.button-group button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+.highlight-title{
+    color: #007bff;
+}
