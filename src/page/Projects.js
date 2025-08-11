@@ -1,6 +1,5 @@
 import React from "react";
 import "./Projects.css";
-import bgvideo from "../page/asset/2176431.mp4";
 
 const projects = [
   {
@@ -28,22 +27,12 @@ const projects = [
 
 function Projects() {
   return (
-    <div className="projects-container">
-      <video
-        className="background-video"
-        src={bgvideo}
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
-      <div className="overlay"></div>
-
-      <div className="projects-content">
-        <h2 className="section-title">My Projects</h2>
-        <div className="projects-grid">
-          {projects.map((project, index) => (
-            <div className="project-card" key={index}>
+    <section className="projects-section" id="projects">
+      <h2 className="section-title">My Projects</h2>
+      <div className="projects-grid">
+        {projects.map((project, index) => (
+          <div className="project-card" key={index}>
+            <div className="project-content">
               <h3>{project.title}</h3>
               <p>{project.description}</p>
               <p className="tech-stack">
@@ -58,10 +47,10 @@ function Projects() {
                 View Project →
               </a>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 }
 

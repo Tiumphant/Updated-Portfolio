@@ -1,28 +1,17 @@
 import React from "react";
 import "./Contact.css";
 import image from "./asset/image.webp";
-import bgvideo from "./asset/2176431.mp4";
 
 function Contact() {
   return (
-    <div className="contact-wrapper">
-      <video
-        className="background-video"
-        src={bgvideo}
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
-      <div className="overlay"></div>
-
+    <div className="contact-wrapper fade-in">
       <div className="contact-container">
         <div className="contact-header text-center">
           <h2>Get in Touch</h2>
           <p>Let's build something amazing together.</p>
         </div>
 
-        <div className="contact-content reverse-layout">
+        <div className="contact-content">
           <div className="contact-details">
             <p>
               I'm always open to discussing new projects, creative ideas, or
@@ -64,7 +53,7 @@ function Contact() {
                 GitHub
               </a>
               <a
-                href="nishabairagi9196@gmail.com"
+                href="mailto:nishabairagi9196@gmail.com"
                 target="_blank"
                 rel="noreferrer"
               >

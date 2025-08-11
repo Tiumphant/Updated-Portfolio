@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Skills.css";
-import bgvideo from "../page/asset/2176431.mp4";
 
 function Skills() {
   const skills = [
@@ -17,25 +16,34 @@ function Skills() {
     { name: "REST API", level: 75 },
   ];
 
-  return (
-    <div className="skills-section position-relative">
-      <video
-        className="background-video"
-        src={bgvideo}
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
-      <div className="overlay"></div>
+  const [visible, setVisible] = useState(false);
+  const sectionRef = useRef(null);
 
-      <div className="container position-relative">
-        <h2 className="text-center text-white mb-4">My Skills</h2>
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+  }, []);
+
+  return (
+    <div ref={sectionRef} className="skills-section">
+      <div className="container">
+        <h2 className="text-center mb-5 fade-in">My Skills</h2>
         <div className="row">
           {skills.map((skill, index) => (
-            <div className="col-md-6 mb-4" key={index}>
+            <div
+              className={`col-md-6 mb-4 skill-card ${visible ? "fade-up" : ""}`}
+              key={index}
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
               <div className="skill-item">
-                <div className="d-flex justify-content-between text-white">
+                <div className="d-flex justify-content-between">
                   <span className="skill-name">{skill.name}</span>
                   <span className="skill-level">{skill.level}%</span>
                 </div>
@@ -43,10 +51,10 @@ function Skills() {
                   <div
                     className="progress-bar"
                     role="progressbar"
-                    style={{ width: `${skill.level}%` }}
-                    aria-valuenow={skill.level}
-                    aria-valuemin="0"
-                    aria-valuemax="100"
+                    style={{
+                      width: visible ? `${skill.level}%` : "0%",
+                      transition: "width 1.5s ease",
+                    }}
                   ></div>
                 </div>
               </div>
